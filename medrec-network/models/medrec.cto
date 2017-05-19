@@ -1,0 +1,41 @@
+/**
+ * Defines a data model for a blind vehicle auction
+ */
+namespace org.idb.medrec
+
+enum MedicalRecordAttributeType {
+    o STRING
+    o INTEGER
+    o DATE
+}
+
+asset MedicalRecord identified by medicalRecord {
+  o String medicalRecord
+  o MedicalRecordAttribute[] attributes
+  --> Employee employee
+}
+
+concept MedicalRecordAttribute{
+   o  String name
+   o  String value
+   o MedicalRecordAttributeType type
+}
+
+
+abstract participant User identified by email {
+  o String email
+  o String firstName
+  o String lastName
+}
+
+participant Employee extends User {
+}
+
+participant MedicalEmployee extends User {
+}
+
+transaction UpdateMedicalRecord identified by transactionId {
+  o String transactionId
+  o MedicalRecord medicalRecord
+}
+
