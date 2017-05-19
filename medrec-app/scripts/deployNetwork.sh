@@ -4,6 +4,6 @@
 set -ev
 cd ../medrec-network
 
-composer archive create --sourceName . --sourceType dir --archiveFile medrec-network.bna
+composer archive create --sourceName medrec-network --sourceType module --archiveFile medrec-network.bna
 composer network deploy --archiveFile medrec-network.bna  -p medrec -i admin -s adminpw
 composer network list -n medrec-network -p medrec -i admin -s adminpw
