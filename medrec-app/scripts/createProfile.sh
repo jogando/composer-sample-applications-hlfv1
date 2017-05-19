@@ -10,7 +10,7 @@ rm -rf ~/.hfc-key-store/*
 mkdir -p ~/.composer-connection-profiles/medrec
 cat << EOF > ~/.composer-connection-profiles/medrec/connection.json
 {
-    "type": "hlfv1",
+    "type": "medrec",
     "orderers": [
         "grpc://localhost:7050"
     ],
