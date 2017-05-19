@@ -3,6 +3,6 @@
        "participantId" : "admin",
        "participantPwd" :"adminpw",
        "businessNetworkIdentifier" : "medrec-network",
-       "connectionProfile" :"hlfv1"
+       "connectionProfile" :"medrec"
     }
 }

@@ -12,7 +12,8 @@
     "startHLF": "scripts/start-hyperledger.sh",
     "stopHLF": "scripts/stop-hyperledger.sh",
     "teardownHLF": "scripts/teardown.sh",
-    "deployNetwork": "composer network deploy --archiveFile ./node_modules/medrec-network/dist/medrec-network.bna  -p hlfv1 -i admin -s adminpw && composer network list -n medrec-network -p hlfv1 -i admin -s adminpw",
+    "deployNetwork": "composer network deploy --archiveFile ./node_modules/medrec-network/dist/medrec-network.bna  -p medrec -i admin -s adminpw && composer network list -n medrec-network -p medrec -i admin -s adminpw",
+    "startRestServer":"",
     "postinstall": "scripts/download-hyperledger.sh && scripts/createProfile.sh && npm run startHLF && npm run deployNetwork"
   },
   "repository": {

@@ -1,5 +1,5 @@
 {
-    "type": "hlfv1",
+    "type": "medrec",
     "orderers": [
         {
         "url": "grpc://localhost:7050"
